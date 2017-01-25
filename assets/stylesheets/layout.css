@@ -1,0 +1,14 @@
+.canvas {
+	/*background-color: lightblue;*/
+	opacity: .5;
+	display: block;
+	z-index: -1;
+}
+
+.title-and-instructions {
+	position: absolute;
+	color: black;
+	text-align: center;
+	top: 40%;
+	left: 46%;
+}
