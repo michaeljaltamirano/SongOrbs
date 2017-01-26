@@ -3,9 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>SongOrbs</title>
-    <script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
-    <script src="https://code.createjs.com/tweenjs-0.6.2.min.js"></script>
-    <script src="https://code.createjs.com/soundjs-0.6.2.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.2/howler.core.min.js"></script>
     <script type="application/javascript" src="lib/bundle.js"></script>
@@ -14,10 +11,16 @@
 
   <body>
     <canvas id="canvas" class="canvas"></canvas>
-    <div class="title-and-instructions">
+    <div class="orb-container">
+      <div class="balls">
+        <div id="ball" class="ball ball-red"><div class="letter">A</div></div>
+        <div id="ball2" class="ball2 ball-red"><div class="letter">F</div></div>
+      </div>
+    </div>
+    <div id="title" class="title-and-instructions">
       <div>SongOrbs</div>
-      <div>Press a key</div>
-      <button type="hidden">I am a button</button>
+      <div>When the orb reaches the center of the screen, push the letter associated with the orb.</div>
+      <button>I am a button</button>
     </div>
   </body>
 </html>
