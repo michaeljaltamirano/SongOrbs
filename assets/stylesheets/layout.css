@@ -84,18 +84,12 @@ a:hover {
 	background: aquamarine;
 	z-index: -5;
 	align-self: center;
-  &.ball-red {
-    background: tomato;
-  }
-  &.ball-blue {
-    background: lightskyblue;
-  }
 }
 
 .letter {
-  font-family: arial black;
-  font-size: 24px;
-	margin-top: -0.05em;
+	font-family: 'Slabo 27px', serif;
+	font-size: 1.5em;
+	font-weight: 900;
 }
 
 .background {
@@ -110,17 +104,18 @@ a:hover {
 h1 {
 	align-self: center;
 	font-size: 3em;
-	margin-bottom: 0;
+	margin-bottom: -0.5em;
 }
 
 li {
-	margin-top: 20px;
+	margin-top: 10px;
 }
 
 .instructions {
 	position: relative;
 	top: 1em;
 	text-align: center;
+	font-family: 'Slabo 27px', serif;
 }
 
 .instructions-list {
@@ -128,6 +123,7 @@ li {
 	text-align: center;
 	margin: 0;
 	padding:0;
+	font-family: 'Slabo 27px', serif;
 }
 
 .modal {
@@ -137,9 +133,11 @@ li {
 	width: 430px;
   height: 400px;
 	transform: translate(-50%, -50%);
+
 }
 
 .orb-instructions {
+	font-family: 'Slabo 27px', serif;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
