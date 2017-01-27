@@ -5,22 +5,506 @@
     <title>SongOrbs</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.2/howler.core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/1.1.3/anime.min.js"></script>
     <script type="application/javascript" src="lib/bundle.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/layout.css">
   </head>
 
   <body>
+    <section>
+      <article>
+        <!-- <div class="blue"></div>
+        <div class="red"></div>
+        <div class="green"></div> -->
+      </article>
+    </section>
+    <script>
+
+    // var aAnimation = anime({
+    //   targets: '.blue',
+    //   translateX: 200,
+    //   direction: 'alternate',
+    //   autoplay: false,
+    //   easings: 'linear'
+    // });
+    //
+    // var redAnimation = anime({
+    //   targets: '.red',
+    //   translateX: 200,
+    //   direction: 'alternate',
+    //   autoplay: false,
+    //   easings: 'linear'
+    // });
+    //
+    // var greenAnimation = anime({
+    //   targets: '.green',
+    //   translateX: 200,
+    //   translateY: 100,
+    //   direction: 'alternate',
+    //   autoplay: false,
+    //   easings: 'linear'
+    // });
+    //
+    // blueAnimation.settings.complete = function() {
+    //   greenAnimation.restart();
+    // }
+    //
+    // redAnimation.settings.complete = function() {
+    //   blueAnimation.restart();
+    // }
+    //
+    // greenAnimation.settings.complete = function() {
+    //   redAnimation.restart();
+    // }
+
+    // greenAnimation.play();
+
+    </script>
     <canvas id="canvas" class="canvas"></canvas>
     <div class="orb-container">
       <div class="balls">
-        <div id="ball" class="ball ball-red"><div class="letter">A</div></div>
-        <div id="ball2" class="ball2 ball-red"><div class="letter">F</div></div>
+        <div id="ball" class="ball ball-a"><div class="letter">A</div></div>
+        <div id="ball" class="ball ball-b"><div class="letter">B</div></div>
+        <div id="ball" class="ball ball-c"><div class="letter">C</div></div>
+        <div id="ball" class="ball ball-d"><div class="letter">D</div></div>
+        <div id="ball" class="ball ball-e"><div class="letter">E</div></div>
+        <div id="ball" class="ball ball-f"><div class="letter">F</div></div>
+        <div id="ball" class="ball ball-g"><div class="letter">G</div></div>
+        <div id="ball" class="ball ball-h"><div class="letter">H</div></div>
+        <div id="ball" class="ball ball-i"><div class="letter">I</div></div>
+        <div id="ball" class="ball ball-j"><div class="letter">J</div></div>
+        <div id="ball" class="ball ball-k"><div class="letter">K</div></div>
+        <div id="ball" class="ball ball-l"><div class="letter">L</div></div>
+        <div id="ball" class="ball ball-m"><div class="letter">M</div></div>
+        <div id="ball" class="ball ball-n"><div class="letter">N</div></div>
+        <div id="ball" class="ball ball-o"><div class="letter">O</div></div>
+        <div id="ball" class="ball ball-p"><div class="letter">P</div></div>
+        <div id="ball" class="ball ball-q"><div class="letter">Q</div></div>
+        <div id="ball" class="ball ball-r"><div class="letter">R</div></div>
+        <div id="ball" class="ball ball-s"><div class="letter">S</div></div>
+        <div id="ball" class="ball ball-t"><div class="letter">T</div></div>
+        <div id="ball" class="ball ball-u"><div class="letter">U</div></div>
+        <div id="ball" class="ball ball-v"><div class="letter">V</div></div>
+        <div id="ball" class="ball ball-w"><div class="letter">W</div></div>
+        <div id="ball" class="ball ball-x"><div class="letter">X</div></div>
+        <div id="ball" class="ball ball-y"><div class="letter">Y</div></div>
+        <div id="ball" class="ball ball-z"><div class="letter">Z</div></div>
       </div>
     </div>
-    <div id="title" class="title-and-instructions">
-      <div>SongOrbs</div>
-      <div>When the orb reaches the center of the screen, push the letter associated with the orb.</div>
-      <button>I am a button</button>
+    <script>
+
+    // var redCircle = anime({
+    //   targets: '.ball-a',
+    //   translateY: (canvas.height) + 5,
+    //   direction: 'alternate',
+    //   duration: 4000,
+    //   elasticity: -100,
+    //   autoplay: true,
+    //   easings: 'easeInQuad'
+    // })
+    //
+    // redCircle.settings.compete = function() {
+    //   redCircle.play();
+    // }
+    //
+    // redCircle.play();
+
+    var aAnimation = anime({
+      targets: '.ball-a',
+      translateX: ((window.innerWidth / 2 ) * 0.974),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var bAnimation = anime({
+      targets: '.ball-b',
+      translateX: ((window.innerWidth / 2 ) * 0.895),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var cAnimation = anime({
+      targets: '.ball-c',
+      translateX: ((window.innerWidth / 2 ) * 0.818),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var dAnimation = anime({
+      targets: '.ball-d',
+      translateX: ((window.innerWidth / 2 ) * 0.740),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var eAnimation = anime({
+      targets: '.ball-e',
+      translateX: ((window.innerWidth / 2 ) * 0.663),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var fAnimation = anime({
+      targets: '.ball-f',
+      translateX: ((window.innerWidth / 2 ) * 0.585),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var gAnimation = anime({
+      targets: '.ball-g',
+      translateX: ((window.innerWidth / 2 ) * 0.507),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var hAnimation = anime({
+      targets: '.ball-h',
+      translateX: ((window.innerWidth / 2 ) * 0.429),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var iAnimation = anime({
+      targets: '.ball-i',
+      translateX: ((window.innerWidth / 2 ) * 0.351),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var jAnimation = anime({
+      targets: '.ball-j',
+      translateX: ((window.innerWidth / 2 ) * 0.273),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var kAnimation = anime({
+      targets: '.ball-k',
+      translateX: ((window.innerWidth / 2 ) * 0.196),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var lAnimation = anime({
+      targets: '.ball-l',
+      translateX: ((window.innerWidth / 2 ) * 0.118),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var mAnimation = anime({
+      targets: '.ball-m',
+      translateX: ((window.innerWidth / 2 ) * 0.039),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var nAnimation = anime({
+      targets: '.ball-n',
+      translateX: -((window.innerWidth / 2 ) * 0.037),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var oAnimation = anime({
+      targets: '.ball-o',
+      translateX: -((window.innerWidth / 2 ) * 0.116),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var pAnimation = anime({
+      targets: '.ball-p',
+      translateX: -((window.innerWidth / 2 ) * 0.194),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var qAnimation = anime({
+      targets: '.ball-q',
+      translateX: -((window.innerWidth / 2 ) * 0.272),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var rAnimation = anime({
+      targets: '.ball-r',
+      translateX: -((window.innerWidth / 2 ) * 0.348),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var sAnimation = anime({
+      targets: '.ball-s',
+      translateX: -((window.innerWidth / 2 ) * 0.428),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var tAnimation = anime({
+      targets: '.ball-t',
+      translateX: -((window.innerWidth / 2 ) * 0.505),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var uAnimation = anime({
+      targets: '.ball-u',
+      translateX: -((window.innerWidth / 2 ) * 0.583),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var vAnimation = anime({
+      targets: '.ball-v',
+      translateX: -((window.innerWidth / 2 ) * 0.660),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var wAnimation = anime({
+      targets: '.ball-w',
+      translateX: -((window.innerWidth / 2 ) * 0.740),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var xAnimation = anime({
+      targets: '.ball-x',
+      translateX: -((window.innerWidth / 2 ) * 0.820),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var yAnimation = anime({
+      targets: '.ball-y',
+      translateX: -((window.innerWidth / 2 ) * 0.895),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+    var zAnimation = anime({
+      targets: '.ball-z',
+      translateX: -((window.innerWidth / 2 ) * 0.975),
+      translateY: (window.innerHeight / 2) - 15,
+      direction: 'alternate',
+      autoplay: false,
+      duration: 3000,
+      elasticity: -1500,
+      easings: 'linear'
+    });
+
+
+    aAnimation.settings.complete = function() {
+      cAnimation.restart();
+    }
+
+    bAnimation.settings.complete = function() {
+      aAnimation.restart();
+    }
+
+    cAnimation.settings.complete = function() {
+      bAnimation.restart();
+    }
+
+    dAnimation.settings.complete = function() {
+      cAnimation.restart();
+    }
+
+    eAnimation.settings.complete = function() {
+      dAnimation.restart();
+    }
+
+    fAnimation.settings.complete = function() {
+      eAnimation.restart();
+    }
+
+    gAnimation.settings.complete = function() {
+      fAnimation.restart();
+    }
+
+    hAnimation.settings.complete = function() {
+      gAnimation.restart();
+    }
+
+    iAnimation.settings.complete = function() {
+      hAnimation.restart();
+    }
+
+    jAnimation.settings.complete = function() {
+      iAnimation.restart();
+    }
+
+    kAnimation.settings.complete = function() {
+      jAnimation.restart();
+    }
+
+    lAnimation.settings.complete = function() {
+      kAnimation.restart();
+    }
+
+    mAnimation.settings.complete = function() {
+      lAnimation.restart();
+    }
+
+    nAnimation.settings.complete = function() {
+      mAnimation.restart();
+    }
+
+    oAnimation.settings.complete = function() {
+      nAnimation.restart();
+    }
+
+    pAnimation.settings.complete = function() {
+      oAnimation.restart();
+    }
+
+    qAnimation.settings.complete = function() {
+      pAnimation.restart();
+    }
+
+    rAnimation.settings.complete = function() {
+      qAnimation.restart();
+    }
+
+    sAnimation.settings.complete = function() {
+      rAnimation.restart();
+    }
+
+    tAnimation.settings.complete = function() {
+      sAnimation.restart();
+    }
+
+    uAnimation.settings.complete = function() {
+      tAnimation.restart();
+    }
+
+    vAnimation.settings.complete = function() {
+      uAnimation.restart();
+    }
+
+    wAnimation.settings.complete = function() {
+      vAnimation.restart();
+    }
+
+    xAnimation.settings.complete = function() {
+      wAnimation.restart();
+    }
+
+    yAnimation.settings.complete = function() {
+      xAnimation.restart();
+    }
+
+    zAnimation.settings.complete = function() {
+      yAnimation.restart();
+    }
+
+    aAnimation.play();
+
+    </script>
+    <div class="circle-orb-parent">
+      <div class="circle-orb"></div>
     </div>
   </body>
 </html>
