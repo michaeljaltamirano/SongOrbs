@@ -62,6 +62,10 @@ a:hover {
 	background: #6DC7A3;
 }
 
+.golden {
+	background: #FFDF00;
+}
+
 .circle-orb-parent {
 	position: absolute;
 	width: 100%;
