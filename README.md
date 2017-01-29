@@ -6,17 +6,17 @@
 
 [SongOrbs]: https://mjaltamirano.github.io/SongOrbs/
 
-In SongOrbs the user may choose to activate a preloaded song, or play with the page as a soundboard. In the preloaded song, orbs at the top of the screen move to the center, representing keyboard keys that should be hit at the time the letter enters the center. Each key is associated with a specific slice of song, and has its own associated animation.
+In SongOrbs the user may choose to play along with a preloaded sequence, or just play with the page as a soundboard. In the preloaded sequence, orbs at the top of the screen move to the center, representing keyboard keys that should be hit at the time the lettered orb enters the center. Each key is associated with a specific slice of song, and has its own associated animation.
 
 The preloaded song orbs represent a degree of gamification, but the page is meant to facilitate experimentation rather than have rules, so there are no points, and the game never ends.
 
-![view](docs/SongOrbs1.gif)
+![view](docs/SongOrbsDemo.gif)
 
 ## Instructions
 
-Select either the preloaded song to play along with a song I put together, or select the soundboard to experiment with the sounds.
+Select either the preloaded sequence to play along with a song I put together, or select the soundboard to experiment with the sounds.
 
-## Technologies & Strategies
+## Features & Implementations
 
 SongOrbs is written in JavaScript, made up primarily of Anime.js animations with HTML5, Howler.js and jQuery.
 
@@ -34,9 +34,46 @@ o: {
 
 ```
 
-"numOrbs" represents the number of orbs to be generated on the screen at the time of keypress. The Anime.js library provides some useful methods, including "anime.random(array)", which will select a random number between two given numbers.
+"numOrbs" represents the number of orbs to be generated on the screen at the time of keypress. The Anime.js library provides some useful methods, including "anime.random([array])", which will select a random number between two given numbers, which is used in SongOrbs to randomize the color and size of an orb, as well as how long it is present on the page.
 
-All music is sampled from the song "Yume" by Helios and implmented using Howler.js.
+The preloaded song sequence setup comprises a series of anime.js effects to move the orbs at the top of the screen to the center, implemented through setTimeouts.
+
+```JavaScript
+
+let fAnimation = anime({
+  targets: '.orb-f',
+  translateX: ((window.innerWidth / 2 ) * 0.585),
+  translateY: (window.innerHeight / 2) - 15,
+  direction: 'alternate',
+  autoplay: false,
+  duration: 2000,
+  elasticity: -1500,
+});
+
+...
+
+setTimeout(function(){
+  fAnimation.play();
+  $(".orb-f").removeClass("golden").addClass("ambient");
+  $(".orb-g").removeClass("ambient").addClass("golden");
+}, 1000);
+
+```
+
+The jQuery methods are used to indicate to the user which orbs they should expect next in the preloaded state sequence by altering the class, which controls the color of the orb.
+
+All music is sampled from the song "Yume" by Helios and implmented using Howler.js, executed on keypress:
+
+```JavaScript
+
+document.addEventListener('keydown', function(e) {
+  if (MUSIC_KEYS.indexOf(e.keyCode) > -1 ) {
+    new Howl({ src: SOUNDS[e.keyCode] }).play();
+    generateOrb(orbEffects[e.key]);
+  }
+});
+
+```
 
 ## Future Implementations
 
