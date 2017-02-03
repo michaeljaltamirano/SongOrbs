@@ -26,6 +26,8 @@ a:hover {
 
 .links {
 	z-index: 20;
+	position: relative;
+	top: 1.5em;
 }
 
 .orbs {
@@ -108,7 +110,7 @@ a:hover {
 h1 {
 	align-self: center;
 	font-size: 3em;
-	margin-bottom: -0.5em;
+	margin-bottom: 0em;
 }
 
 li {
@@ -117,7 +119,7 @@ li {
 
 .instructions {
 	position: relative;
-	top: 1em;
+	top: 0.33em;
 	text-align: center;
 	font-family: 'Slabo 27px', serif;
 }
